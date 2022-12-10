@@ -9,7 +9,7 @@ const translateText = (text) => {
     fetch (`https://api.funtranslations.com/translate/yoda.json?text=${encodedText}`)
     .then(response => response.json())
         .then(data => showTranslatedText(data))
-    .catch(error => console.log(error.error.message))
+    .catch(error => console.log(error))
 };
 // Add's "click" event listener to the "translate" button.
 let button = document.getElementById("translateButton")
